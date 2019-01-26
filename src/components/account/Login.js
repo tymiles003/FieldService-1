@@ -3,6 +3,9 @@ import { Container, Header, Content, Form, Item, Input, Label, Button, Text } fr
 import {StyleSheet, Image} from 'react-native'
 
 export default class Home extends Component{
+  static navigationOptions = { header: null };
+
+
   render() {
     return (
       <Container style={styles.container}>
@@ -20,7 +23,7 @@ export default class Home extends Component{
               <Input style={styles.input} />
             </Item>
           </Form>
-          <Button style={styles.button}>
+          <Button style={styles.button} onPress={() => this.props.navigation.navigate('Home')}>
               <Text style={{color: 'white', justifyContent: 'center'}}>Acessar</Text>
             </Button>
         </Content>

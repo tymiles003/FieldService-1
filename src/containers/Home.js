@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
 import { Container, Header, Content, Form, Item, Input } from 'native-base';
-import {View, Text} from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
-export default class Home extends Component{
+export default class Home extends Component {
+    static navigationOptions = { header: null };
+
     render(){
         return(
-            <View>
+            <View style={styles.container}>
                 <Text>
                     Home
                 </Text>
@@ -13,3 +15,12 @@ export default class Home extends Component{
         )
     }
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,    
+      backgroundColor: '#2c3e50'
+        },
+    
+  });
